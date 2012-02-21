@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57184500-347A-4262-8E1C-3A817C66B069}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thinktecture.ServiceModel</RootNamespace>
+    <AssemblyName>Thinktecture.ServiceModel</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2">
+      <HintPath>Reference Assemblies\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>Reference Assemblies\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>Reference Assemblies\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>Reference Assemblies\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.ServiceLocatorAdapter">
+      <HintPath>Reference Assemblies\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.StaticFactory">
+      <HintPath>Reference Assemblies\Microsoft.Practices.Unity.StaticFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=0.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft .NET Services Client Redist (March 2009 CTP)\Redist\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channels\AsyncResult.cs" />
+    <Compile Include="Channels\InputQueue.cs" />
+    <Compile Include="Channels\NetHttp\NetHttpBinding.cs" />
+    <Compile Include="Channels\NetHttp\NetHttpBindingCollectionElement.cs" />
+    <Compile Include="Channels\NetHttp\NetHttpBindingElement.cs" />
+    <Compile Include="Channels\Udp\UdpBindingElementImporter.cs" />
+    <Compile Include="Channels\Udp\UdpChannelFactory.cs" />
+    <Compile Include="Channels\Udp\UdpChannelHelpers.cs" />
+    <Compile Include="Channels\Udp\UdpChannelListener.cs" />
+    <Compile Include="Channels\Udp\UdpInputChannel.cs" />
+    <Compile Include="Channels\Udp\UdpOutputChannel.cs" />
+    <Compile Include="Channels\Udp\UdpTransportBindingElement.cs" />
+    <Compile Include="Channels\Udp\UdpTransportElement.cs" />
+    <Compile Include="WebServiceHost.cs" />
+    <Compile Include="Diagnostics\PerformanceTraceBehavior.cs" />
+    <Compile Include="Diagnostics\PerformanceTraceExtension.cs" />
+    <Compile Include="Diagnostics\PerformanceTraceInvoker.cs" />
+    <Compile Include="Dispatcher\ExceptionHandlingBehavior.cs" />
+    <Compile Include="Dispatcher\ExceptionMappingAttribute.cs" />
+    <Compile Include="Dispatcher\ExceptionMappingErrorHandler.cs" />
+    <Compile Include="Dispatcher\IExceptionMapper.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IBootstrapTask.cs" />
+    <Compile Include="ServiceContext\ServiceContextStore.cs" />
+    <Compile Include="Tracing\ColorConsoleTraceListener.cs" />
+    <Compile Include="Wsdl\Flattening.cs" />
+    <Compile Include="IntranetProfile\Profile.cs" />
+    <Compile Include="IoC\IocInstanceProvider.ForUnity.cs" />
+    <Compile Include="IoC\IocBehaviorExtensionElement.cs" />
+    <Compile Include="IoC\IocInstanceProvider.cs" />
+    <Compile Include="IoC\IocServiceBehavior.cs" />
+    <Compile Include="Tracing\MessageSize\LengthMeasurableStream.cs" />
+    <Compile Include="Tracing\MessageSize\MessageSizeDetectionEncoder.cs" />
+    <Compile Include="Tracing\MessageSize\MessageSizeDetectionEncoderFactory.cs" />
+    <Compile Include="Tracing\MessageSize\MessageSizeDetectionEncodingBindingElement.cs" />
+    <Compile Include="Tracing\MessageSize\MessageSizeWriter.cs" />
+    <Compile Include="Tracing\MessageSize\TraceMessageSizeAttribute.cs" />
+    <Compile Include="Pooling\InstancePoolingBehavior.cs" />
+    <Compile Include="Pooling\InstancePoolingInstanceProvider.cs" />
+    <Compile Include="ResourceHelper.cs" />
+    <Compile Include="Serializer\InheritableDataContractSerializer.cs" />
+    <Compile Include="Serializer\PrefixContractSerializerOperationBehavior.cs" />
+    <Compile Include="Serializer\PrefixDataContractSerializer.cs" />
+    <Compile Include="Serializer\PrefixDataContractSerializerFormatAttribute.cs" />
+    <Compile Include="Serializer\RegisterNamespacePrefixAttribute.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ChannelFactoryManager.cs" />
+    <Compile Include="Activation\IntranetProfileServiceHostFactory.cs" />
+    <Compile Include="Activation\ServiceHostFactory.cs" />
+    <Compile Include="CommunicationObjectHelper.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Tracing\TraceServiceCallInformationAttribute.cs" />
+    <Compile Include="Tracing\CallTraceParameterInspector.cs" />
+    <Compile Include="Client\RenewableClientBase.cs" />
+    <Compile Include="Client\RenewableDuplexClientBase.cs" />
+    <Compile Include="Serializer\NetDataContractSerializerOperationBehavior.cs" />
+    <Compile Include="IntranetProfile\BindingController.cs" />
+    <Compile Include="Client\ChannelFactory.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="Wsdl\FlatWsdl.cs" />
+    <Compile Include="ServiceHost.cs" />
+    <Compile Include="Activation\FlatWsdlServiceHostFactory.cs" />
+    <Compile Include="IntranetProfile\MaximumFaultMessageSize.cs" />
+    <Compile Include="Serializer\NetDataContractSerializerFormatAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Notes="&lt;Notes Project=&quot;57184500-347a-4262-8e1c-3a817c66b069&quot; xmlns=&quot;clr-namespace:StickyNotes.Model;assembly=StickyNotes&quot;&gt;&lt;Notes.StickyNotes&gt;&lt;Note FilePath=&quot;&quot; Content=&quot;&quot; Date=&quot;2008-04-18T23:38:55.9845852+02:00&quot; /&gt;&lt;/Notes.StickyNotes&gt;&lt;/Notes&gt;" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
